@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/output.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body class="bg-blue-600">
+    <div class="flex items-center justify-center mt-5 ">
+        <label for="search">Location </label>
+        <input class="p-2 rounded-lg w-96" id="search" name="s">
+    </div>
+    <section class="m-8 p-5 border-2 rounded-lg bg-slate-50">
+        <article class="ml-10 mr-10 flex flex-col items-center justify-center pt-2 pb-2 ">
+            <div class="flex justify-between w-full font-semibold "><span id="loc">Location</span> <span>Day</span></div>
+            <h3 class="text-center p-3 font-semibold text-lg">Weekday, current time</h3>
+            <img class="w-28 h-28 border-2 " id="conditionIcon">
+            <span id="feelsLike">weather type: ie sunny</span>
+            <span id="temp"class="text-8xl text-center w-full p-2 mr-2">+F/C</span>
+            <div class="flex flex-col w-full">
+                <div class="flex justify-between">
+                    <span>weather attribute</span>
+                    <span class="rainChance">Value</span>
+                </div>
+                <div class="flex justify-between p-3 border-2">
+                    <span class="w-1/2">Wind Speed</span>
+                    <span id="windSpeed" class="w-1/2 ">Value</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Humidity</span>
+                    <span id="humidity">Value</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>UV Index</span>
+                    <span id="uvIndex">Value</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Pressure</span>
+                    <span id="pressure">Value</span>
+                </div>
+            </div>
+        </article>
+    </section>
+    <script src="./app.js"></script>
+</body>
+</html>
