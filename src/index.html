@@ -3,41 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
+    <script src="https://kit.fontawesome.com/b365b8b6c3.js" crossorigin="anonymous"></script>
     <link href="../dist/output.css" rel="stylesheet">
     <title>Document</title>
 </head>
-<body class="bg-blue-600">
-    <div class="flex items-center justify-center mt-5 ">
-        <label for="search">Location </label>
-        <input class="p-2 rounded-lg w-96" id="search" name="s">
+<body class="bg-blue-600 flex flex-col justify-center items-center">
+    <div class="flex flex-col m-10  items-center justify-center mt-5 ">
+        <input class="  p-2 rounded-lg w-96 " id="search" placeholder="location, country" name="s">
     </div>
-    <section class="m-8 p-5 border-2 rounded-lg bg-slate-50">
-        <article class="ml-10 mr-10 flex flex-col items-center justify-center pt-2 pb-2 ">
-            <div class="flex justify-between w-full font-semibold "><span id="loc">Location</span> <span>Day</span></div>
-            <h3 class="text-center p-3 font-semibold text-lg">Weekday, current time</h3>
-            <img class="w-28 h-28 border-2 " id="conditionIcon">
-            <span id="feelsLike">weather type: ie sunny</span>
-            <span id="temp"class="text-8xl text-center w-full p-2 mr-2">+F/C</span>
-            <div class="flex flex-col w-full">
-                <div class="flex justify-between">
-                    <span>weather attribute</span>
-                    <span class="rainChance">Value</span>
+    <section class="m-8 p-5 border-2 rounded-lg bg-slate-50 md:w-3/5 md:flex md:justify-center md:items-center">
+        <article class="ml-10 mr-10 flex flex-col items-center justify-center pt-2 pb-2 md:max-w-full">
+            <div class="flex italic justify-between w-full font-bold text-zinc-600 ">
+                <span id="loc">Location</span>
+                 <span id="dayOfWeek">Day</span>
+            </div>
+            <h3 class="text-center p-3 font-semibold text-sm text-zinc-700 italic" id="time">Weekday, current time</h3>
+            <img class="w-28 h-28" id="conditionIcon">
+            <span id="feelsLike" class="pt-3 font-bold" >weather type: ie sunny</span>
+            <span id="temp" class="text-8xl text-center w-full p-2 mr-3 pt-3 pb-3 text-yellow-500 ">+F/C</span>
+            <!-- 2 column split -->
+            <div class="flex flex-col w-full justify-center  text-lg">
+                <div class="flex justify-between p-3 border-b-2">
+                    <span class="w-1/2" >Weather Attribute</span>
+                    <div class="w-1/2">
+                        <span  id="rainChance">Value</span>
+                    </div>
                 </div>
-                <div class="flex justify-between p-3 border-2">
+                <div class="flex justify-between p-3  border-b-2">
                     <span class="w-1/2">Wind Speed</span>
-                    <span id="windSpeed" class="w-1/2 ">Value</span>
+                    <div class="w-1/2">
+                        <i class="fa-solid fa-circle fa-2xs text-slate-500"></i>
+                        <span id="windSpeed" >Value</span>
+                    </div>
                 </div>
-                <div class="flex justify-between">
-                    <span>Humidity</span>
-                    <span id="humidity">Value</span>
+                <div class="border-b-2 flex justify-between p-3 ">
+                    <span class="w-1/2" >Humidity</span>
+                    <div class="w-1/2">
+                        <i class="fa-solid fa-circle fa-2xs text-red-400"></i>
+                        <span  id="humidity">Value</span>
+                    </div>
                 </div>
-                <div class="flex justify-between">
-                    <span>UV Index</span>
-                    <span id="uvIndex">Value</span>
+                <div class="flex border-b-2 justify-between p-3 ">
+                    <span class="w-1/2" >UV Index</span>
+                    <div class="w-1/2">
+                        <i class="fa-solid fa-circle fa-2xs text-purple-300"></i>
+                        <span  id="uvIndex">Value</span>
+                    </div>
                 </div>
-                <div class="flex justify-between">
-                    <span>Pressure</span>
-                    <span id="pressure">Value</span>
+                <div class="flex justify-between p-3 ">
+                    <span class="w-1/2" >Pressure</span>
+                    <div class="w-1/2">
+                        <i class="fa-solid fa-circle fa-2xs text-green-300"></i>
+                        <span  id="pressure">Value</span>
+                    </div>
                 </div>
             </div>
         </article>
